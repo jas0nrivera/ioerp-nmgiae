@@ -1,38 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Heart with J & F</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Stylesheet" href="style.css">
+    <title>Document</title>
 </head>
 <body>
-    <canvas id="heartCanvas" width="500" height="500"></canvas>
-    <script>
-        var canvas = document.getElementById('heartCanvas');
-        var ctx = canvas.getContext('2d');
-
-        function drawHeart() {
-            ctx.beginPath();
-            ctx.moveTo(250, 250);
-            for (var i = 0; i < 225; i++) {
-                var angle = 0.01 * i;
-                var x = 250 + 18 * (16 * Math.pow(Math.sin(angle), 3));
-                var y = 250 - 18 * (13 * Math.cos(angle) - 5 * Math.cos(2*angle) - 2 * Math.cos(3*angle) - Math.cos(4*angle));
-                ctx.lineTo(x, y);
-            }
-            ctx.strokeStyle = 'red';
-            ctx.stroke();
-            ctx.fillStyle = 'red';
-            ctx.fill();
-        }
-
-        function addText() {
-            ctx.font = '20px Arial';
-            ctx.fillStyle = 'blue';
-            ctx.textAlign = 'center';
-            ctx.fillText('J & F', 250, 250);
-        }
-
-        drawHeart();
-        addText();
-    </script>
+    <div class="heart">
+        <div class="c1 red"></div>
+        <div class="c2 red"></div>
+        <div class="r red"></div>
+        <div class="heart-text">J & F</div> <j&f>
+    </div>
 </body>
 </html>
